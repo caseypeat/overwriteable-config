@@ -6,7 +6,7 @@ setup(
     description='Simple Overwriteable Config',
     author='Casey Peat',
     author_email='caseypeat@protonmail.com',
-    url='https://github.com/caseypeat/configyaml',
+    url='https://github.com/caseypeat/overwriteable-config',
     packages=['config'],
     python_requires=">=3.7",
     install_requires=['pyyaml'],
