@@ -36,6 +36,44 @@ def test_merge_overwrite():
 
     assert c_ == c
 
+def test_overwrite_leaf2node():
+    a = OverwriteableConfig()
+    a.a = 0
+    a.b = 1
+
+    b = OverwriteableConfig()
+    b.b = OverwriteableConfig()
+    b.b.a = 1
+    b.b.b = 2
+
+    c = OverwriteableConfig(a, b)
+    
+    c_ = OverwriteableConfig()
+    c_.a = 0
+    c_.b = OverwriteableConfig()
+    c_.b.a = 1
+    c_.b.b = 2
+
+    assert c_ == c
+
+def test_overwrite_node2leaf():
+    a = OverwriteableConfig()
+    a.a = 0
+    a.b = 1
+
+    b = OverwriteableConfig()
+    b.b = OverwriteableConfig()
+    b.b.a = 1
+    b.b.b = 2
+
+    c = OverwriteableConfig(b, a)
+    
+    c_ = OverwriteableConfig()
+    c_.a = 0
+    c_.b = 1
+
+    assert c_ == c
+
 def test_scientific():
     assert is_scientific('1e1') == True
     assert is_scientific('1E1') == True
@@ -66,6 +104,9 @@ if __name__ == '__main__':
     test_merge_overwrite()
 
     test_scientific()
+
+    test_overwrite_leaf2node()
+    test_overwrite_node2leaf()
 
     # test_load()
 

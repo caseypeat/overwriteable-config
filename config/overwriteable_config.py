@@ -63,7 +63,7 @@ class OverwriteableConfig(dict):
 
     def merge(self, other):
         """
-        Merge with other mapping object, note that "other" object will overwrite "self" when conflits occur.
+        Merge with other mapping object, note that "other" object will overwrite "self" when conflicts occur.
         Takes dict or OverwriteableConfig objects as arguments
         """
         if isinstance(other, dict):
@@ -73,10 +73,8 @@ class OverwriteableConfig(dict):
             if key in self.keys():
                 if isinstance(self[key], OverwriteableConfig) and isinstance(other[key], OverwriteableConfig):
                     self[key].merge(other[key])
-                elif not isinstance(self[key], OverwriteableConfig) and not isinstance(other[key], OverwriteableConfig):
-                    self[key] = other[key]
                 else:
-                    raise TypeError('Conflicting types, cannot merge leafs with nodes')
+                    self[key] = other[key]
             else:
                 self[key] = other[key]
 
