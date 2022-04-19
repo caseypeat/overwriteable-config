@@ -1,6 +1,14 @@
 # Install
 
+standard installation
+
 `pip install git+https://github.com/caseypeat/overwriteable-config`
+
+or for tweaking this project
+
+`git clone https://github.com/caseypeat/overwriteable-config`
+
+`pip install -e ./overwritable-config`
 
 # OverwriteableConfig
 
