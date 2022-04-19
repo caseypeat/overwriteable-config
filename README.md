@@ -38,9 +38,7 @@ optimizer:
 
 And pass them as arguments to a script using this project
 
-```bash
-$ python example.py ./a.yaml ./b.yaml
-```
+`$ python example.py ./a.yaml ./b.yaml`
 
 ```python
 # example.py
