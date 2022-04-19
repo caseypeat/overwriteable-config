@@ -1,6 +1,6 @@
 # OverwriteableConfig
 
-This is a barebones overwriteable config project. Most notably, it's function is to import and merge an arbitary number of configurations with overwrite priority given to later configurations. The imported configuration can then be used as a dictionary subclass with not notation access.
+This is a barebones overwriteable config project. Most notably, it's function is to import and merge an arbitary number of configurations with overwrite priority given to later configurations. The imported configuration can then be used as a dictionary subclass with dot notation access.
 
 To demonstrate this lets take two configuration files "a.yaml" and "b.yaml"
 
