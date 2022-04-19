@@ -2,13 +2,14 @@
 
 standard installation
 
-`pip install git+https://github.com/caseypeat/overwriteable-config`
+`$ pip install git+https://github.com/caseypeat/overwriteable-config`
 
 or for tweaking this project
 
-`git clone https://github.com/caseypeat/overwriteable-config`
-
-`pip install -e ./overwritable-config`
+```bash
+$ git clone https://github.com/caseypeat/overwriteable-config
+$ pip install -e ./overwritable-config
+```
 
 # OverwriteableConfig
 
@@ -37,7 +38,9 @@ optimizer:
 
 And pass them as arguments to a script using this project
 
-`$ python example.py ./a.yaml ./b.yaml`
+```bash
+$ python example.py ./a.yaml ./b.yaml
+```
 
 ```python
 # example.py
