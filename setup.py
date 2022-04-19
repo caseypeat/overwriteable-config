@@ -1,5 +1,6 @@
 from setuptools import setup
 
+
 setup(
     name='overwriteable-config',
     version='0.0.1',

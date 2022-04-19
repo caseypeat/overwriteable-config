@@ -88,16 +88,6 @@ def test_scientific():
     assert is_scientific('5e1.2') == False
     assert is_scientific('5.6e1') == False
 
-# def test_load():
-#     sys.argv[1:] = ['./tests/test_yamls/a.yaml', './tests/test_yamls/b.yaml']
-#     from config import cfg
-
-#     assert cfg.a.a1 == 3
-#     assert cfg.a.a2 == 2
-#     assert cfg.b.b1 == 3
-#     assert cfg.z == +12e-3
-#     assert cfg['z'] == '+12e-3'
-
 
 if __name__ == '__main__':
     test_merge()
@@ -107,6 +97,4 @@ if __name__ == '__main__':
 
     test_overwrite_leaf2node()
     test_overwrite_node2leaf()
-
-    # test_load()
 

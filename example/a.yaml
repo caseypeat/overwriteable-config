@@ -1,0 +1,7 @@
+# a.yaml
+network:
+  width: 256
+  height: 8
+training:
+  batch_size: 64
+  num_iters: 100

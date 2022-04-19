@@ -2,6 +2,7 @@ import sys
 
 from config.overwriteable_config import OverwriteableConfig
 
+
 cfg = OverwriteableConfig()
 
 if len(sys.argv) > 1:

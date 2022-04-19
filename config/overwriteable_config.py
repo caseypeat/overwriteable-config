@@ -1,5 +1,6 @@
 import yaml
 
+
 def is_scientific(x):
     if not isinstance(x, str):
         return False
@@ -80,6 +81,9 @@ class OverwriteableConfig(dict):
 
     def as_dict(self):
         return to_dict(self)
+
+    def as_block(self):
+        return yaml.safe_dump(self.as_dict(), default_flow_style=False, sort_keys=False)
 
     def load_yaml(self, yaml_path):
         """ Load and merge YAML file"""
