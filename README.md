@@ -1,3 +1,7 @@
+# Install
+
+`pip install git+https://github.com/caseypeat/overwriteable-config`
+
 # OverwriteableConfig
 
 This is a barebones overwriteable config project. Most notably, it's function is to import and merge an arbitary number of configurations with overwrite priority given to later configurations. The imported configuration can then be used as a dictionary subclass with dot notation access.
@@ -72,11 +76,6 @@ This example can be run from the "./example" directory after installation with t
 or without installation from the root directory with
 
 `$ python -m example.example ./example/a.yaml ./example/b.yaml`
-
-
-# Install
-
-`pip install git+https://github.com/caseypeat/overwriteable-config`
 
 # Other notable functionality
 - This project __does not__ currently have extensive testing of edge cases or protections against overwritting critial atributes. So if one is looking for a way to break this, they need not look very hard...
