@@ -77,9 +77,10 @@ or without installation from the root directory with
 
 `$ python -m example.example ./example/a.yaml ./example/b.yaml`
 
-# Other notable functionality
-- This project __does not__ currently have extensive testing of edge cases or protections against overwritting critial atributes. So if one is looking for a way to break this, they need not look very hard...
-- Scientific notation will be detected and converted to float when accessed via dot notation, but not when accessed using the standard dictionary square brackets
+# Other Things to Note
+- This project __does not__ currently have extensive testing of edge cases or protections against overwritting critial attributes. So if one is looking for a way to break this, they need not look very hard...
+- importing "config" will use all command line arguments passed, so this project is currently incompatible with using command line arguments for anything else.
+- Scientific notation will be detected and converted to float when accessed via dot notation, but not when accessed using the standard dictionary square brackets.
 
 ```python
 >>> cfg.optimizer.learning_rate
